@@ -108,7 +108,9 @@ class _ProductSearchScreenState extends ConsumerState<ProductSearchScreen> {
     final viewMode = ref.watch(viewModeProvider);
 
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.white,
         automaticallyImplyLeading: false,
         title: Text(
           'Product Search',
@@ -142,8 +144,6 @@ class _ProductSearchScreenState extends ConsumerState<ProductSearchScreen> {
               error: (error, _) => Text('Error loading products: $error'),
             ),
           ),
-
-          const Divider(thickness: 1),
 
           // Results area
           Expanded(
@@ -184,6 +184,7 @@ class _ProductSearchScreenState extends ConsumerState<ProductSearchScreen> {
       ),
       child: DropdownButtonHideUnderline(
         child: DropdownButton<String>(
+          dropdownColor: Colors.white,
           isExpanded: true,
           hint: Text(
             'Select a product',
@@ -447,6 +448,7 @@ class _ProductSearchScreenState extends ConsumerState<ProductSearchScreen> {
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
+      backgroundColor: Colors.white,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
       ),

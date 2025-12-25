@@ -43,13 +43,16 @@ class HomeScreen extends ConsumerWidget {
     return Scaffold(
       body: screens[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.white,
         currentIndex: currentIndex,
         selectedItemColor: Colors.lightBlue.shade800,
         unselectedItemColor: Colors.grey,
         onTap: (index) => ref.read(navigationIndexProvider.notifier).state = index,
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.store), label: 'Restaurants'),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
+          BottomNavigationBarItem(icon: Icon(Icons.favorite_border), label: 'Favourites'),
+
         ],
       ),
     );
