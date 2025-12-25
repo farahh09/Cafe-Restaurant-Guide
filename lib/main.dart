@@ -20,22 +20,22 @@ Future<void> main() async {
           'A cozy café offering artisan coffee and fresh pastries in a modern setting.',
     ),
     Store(
-      name: 'Wadi El Nile',
-      logoPath: 'assets/images/sea.png',
-      products: ['Shrimp', 'Fish', 'Salad', 'Sea Boil'],
-      latitude: 30.06461304154986,
-      longitude: 31.20026723543947,
+      name: 'Wendy\'s',
+      logoPath: 'assets/images/wendys.png',
+      products: ['Burger', 'Fries', 'Cola', 'Chicken'],
+      latitude: 30.084148645310602,
+      longitude: 31.332444870858474,
       description:
-          'Delight in the freshest seafood dishes with ocean-inspired ambiance.',
+          'Delight in the freshest burger dishes with american-inspired ambiance.',
     ),
     Store(
-      name: 'Papa Jones',
-      logoPath: 'assets/images/pizza.png',
-      products: ['Pizza', 'Margherita', 'Salad', 'Garlic Bread'],
-      latitude: 30.092652795597267,
-      longitude: 31.308577647427896,
+      name: 'Tikka',
+      logoPath: 'assets/images/grill.png',
+      products: ['Kofta', 'Grilled Chicken', 'Salad', 'Rice'],
+      latitude: 30.05533586846566,
+      longitude: 31.204515891626663,
       description:
-          'YWhere wood-fired pizza meets classic Italian flavors. Every slice tells a story.',
+          'Every grill tells a story.',
     ),
     Store(
       name: 'ASIAN Corner',
@@ -48,7 +48,7 @@ Future<void> main() async {
     ),
     Store(
       name: 'Chicken Workx',
-      logoPath: 'assets/images/fast.png',
+      logoPath: 'assets/images/fast_food.png',
       products: ['Burger', 'Fries', 'Milkshake', 'Fried Chicken'],
       latitude: 30.00860383467504,
       longitude: 30.99573803047055,
@@ -56,13 +56,13 @@ Future<void> main() async {
           'Crispy on the outside, juicy on the inside – our fried chicken is seasoned to perfection and fried golden brown',
     ),
     Store(
-      name: 'Koshary El Basha',
-      logoPath: 'assets/images/koshary.png',
-      products: ['King Koshary', 'The Double', 'Toast Bread', 'Super Koshary'],
-      latitude: 29.995424467357335,
-      longitude: 31.209954971164912,
+      name: 'Koueider',
+      logoPath: 'assets/images/ice_cream.png',
+      products: ['Chocolate Ice Cream', 'Mango Ice Cream', 'Vanilla Ice Cream', 'Strawberry Ice Cream'],
+      latitude: 30.02887009900242,
+      longitude: 31.013325213118478,
       description:
-          'Experience the heart of Egyptian street food with our delicious Koshary.',
+          'Experience the best of Egyptian ice cream with Koueider.',
     ),
   ];
   final url = Uri.parse('$baseUrl/api/auth/restaurants');

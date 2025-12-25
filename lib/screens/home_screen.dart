@@ -58,7 +58,9 @@ class HomeScreen extends ConsumerWidget {
 
   Widget _buildHomeScreen(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.white,
         automaticallyImplyLeading: false,
         title: Text(
           'Restaurants',
@@ -97,6 +99,8 @@ class HomeScreen extends ConsumerWidget {
             itemBuilder: (context, index) {
               final store = restaurants[index];
               return Container(
+                width: 355,
+                height: 205,
                 margin: const EdgeInsets.only(bottom: 16),
                 decoration: BoxDecoration(
                   color: Colors.white,
@@ -109,25 +113,45 @@ class HomeScreen extends ConsumerWidget {
                     ),
                   ],
                 ),
-                child: ListTile(
-                  leading: Image.asset(
-                    store.logoPath,
-                    width: 40,
-                    height: 40,
-                    errorBuilder: (context, error, stackTrace) => const Icon(Icons.image),
-                  ),
-                  title: Text(store.name),
-                  subtitle: Text(store.description),
-                  trailing: const Icon(Icons.arrow_forward_ios, size: 16, color: Colors.grey),
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => ProductListScreen(store: store),
+                child: Column(
+                  children: [
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ProductListScreen(store: store),
+                          ),
+                        );
+                      },
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Stack(
+                            alignment: Alignment.topRight,
+                            children: [
+                              ClipRRect(
+                                  borderRadius: const BorderRadius.vertical(top: Radius.circular(20)),
+                                  child: Image.asset(store.logoPath, height: 130,width: double.infinity,fit: BoxFit.fitWidth, errorBuilder: (context, error, stackTrace) => const Icon(Icons.image,size: 150,),)),
+                              Padding(
+                                padding: const EdgeInsets.all(10),
+                                child: Icon(Icons.favorite_border, size: 25, color: Colors.white),
+                              ),
+                            ],
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0, top: 8),
+                            child: Text(store.name, style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0, top: 5),
+                            child: Text(store.description, style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),),
+                          ),
+                        ],
                       ),
-                    );
-                  },
-                ),
+                    ),
+                  ],
+                )
               );
             },
           );
