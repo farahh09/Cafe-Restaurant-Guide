@@ -12,7 +12,7 @@ Future<void> main() async {
   List<Store> stores = [
     Store(
       name: 'Cilantro',
-      logoPath: 'lib/assets/images/cafe.png',
+      logoPath: 'assets/images/cafe.png',
       products: ['Coffee', 'Croissant', 'Sandwich', 'Cake'],
       latitude: 30.055444119008964,
       longitude: 31.201470553159186,
@@ -21,7 +21,7 @@ Future<void> main() async {
     ),
     Store(
       name: 'Wadi El Nile',
-      logoPath: 'lib/assets/images/sea.png',
+      logoPath: 'assets/images/sea.png',
       products: ['Shrimp', 'Fish', 'Salad', 'Sea Boil'],
       latitude: 30.06461304154986,
       longitude: 31.20026723543947,
@@ -30,7 +30,7 @@ Future<void> main() async {
     ),
     Store(
       name: 'Papa Jones',
-      logoPath: 'lib/assets/images/pizza.png',
+      logoPath: 'assets/images/pizza.png',
       products: ['Pizza', 'Margherita', 'Salad', 'Garlic Bread'],
       latitude: 30.092652795597267,
       longitude: 31.308577647427896,
@@ -39,7 +39,7 @@ Future<void> main() async {
     ),
     Store(
       name: 'ASIAN Corner',
-      logoPath: 'lib/assets/images/asian.png',
+      logoPath: 'assets/images/asian.png',
       products: ['Noodles', 'Rice', 'Broth', 'Dumplings'],
       latitude: 29.967918501415898,
       longitude: 31.26723202765107,
@@ -48,7 +48,7 @@ Future<void> main() async {
     ),
     Store(
       name: 'Chicken Workx',
-      logoPath: 'lib/assets/images/fast.png',
+      logoPath: 'assets/images/fast.png',
       products: ['Burger', 'Fries', 'Milkshake', 'Fried Chicken'],
       latitude: 30.00860383467504,
       longitude: 30.99573803047055,
@@ -57,7 +57,7 @@ Future<void> main() async {
     ),
     Store(
       name: 'Koshary El Basha',
-      logoPath: 'lib/assets/images/koshary.png',
+      logoPath: 'assets/images/koshary.png',
       products: ['King Koshary', 'The Double', 'Toast Bread', 'Super Koshary'],
       latitude: 29.995424467357335,
       longitude: 31.209954971164912,
